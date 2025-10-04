@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/anaconda_ai-{{ version }}.tar.gz
-  sha256: 51e41a2fefd3bc71ad8aa24de0a3b704a5113c34615b22818ac3d174ae75e50b
+  sha256: 6c2bfc763fd31489350b441049f28d06ab35e6b2a5adf961f1c66f3da3294d4e
 
 build:
   noarch: python
