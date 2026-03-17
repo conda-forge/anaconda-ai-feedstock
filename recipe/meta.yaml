@@ -1,5 +1,5 @@
 {% set name = "anaconda-ai" %}
-{% set version = "0.4.3" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/anaconda_ai-{{ version }}.tar.gz
-  sha256: 6c2bfc763fd31489350b441049f28d06ab35e6b2a5adf961f1c66f3da3294d4e
+  sha256: 6a630a89c5b66499d423f12757ff4cb4facb4a0d64add78d5926894bcdc5094a
 
 build:
   noarch: python
@@ -23,8 +23,8 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - anaconda-auth >=0.8
-    - anaconda-cli-base >=0.5
+    - anaconda-auth >=0.13.0
+    - anaconda-cli-base >=0.8.1
     - rich
     - pydantic >=2
     - typer
@@ -32,11 +32,12 @@ requirements:
     - openai
     - platformdirs
     - packaging
-    - click <8.2
     - ruamel_yaml
   run_constrained:
     - langchain-openai >=0.2.8
     - llm >=0.22
+    - mcp >=1.26
+    - pydantic-ai >=1.50
 
 test:
   imports:
