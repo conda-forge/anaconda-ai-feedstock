@@ -31,6 +31,7 @@ requirements:
     - ruamel.yaml
     - openai
     - platformdirs
+    - packaging
     - ruamel_yaml
   run_constrained:
     - langchain-openai >=0.2.8
