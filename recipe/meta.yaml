@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -32,7 +32,6 @@ requirements:
     - openai
     - platformdirs
     - packaging
-    - ruamel_yaml
   run_constrained:
     - langchain-openai >=0.2.8
     - llm >=0.22
