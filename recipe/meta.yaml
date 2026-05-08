@@ -1,5 +1,5 @@
 {% set name = "anaconda-ai" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/anaconda_ai-{{ version }}.tar.gz
-  sha256: 6a630a89c5b66499d423f12757ff4cb4facb4a0d64add78d5926894bcdc5094a
+  sha256: e73c957f825e6eee80eae308da311893add04e9f60fbe67c0b02cffd4453dd0d
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
